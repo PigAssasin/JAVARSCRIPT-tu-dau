@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clousure function</title>
+</head>
+<body>
+    Là hàm không có tên
+
+    Closure function là hàm tạo ra biến bên trong nó và một hàm bên trong nó, trong khu vực bên tron nó thì cái hàm có thể sử dụng biến bên ngoài hàm đó
+    <script>
+        //anonymous function
+        var z = function (x,y){
+            return (x+y)/2
+        };
+        console.log(z(2,4));
+
+        //closure function
+        function chao () {
+            var ten = "Vietnd";
+            return function () {
+                console.log('Cafe khong ha' + ten);
+            }
+        }
+        var h = chao();
+        h();
+
+    </script>
+</body>
+</html>

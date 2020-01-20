@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kieu du lieu doi tuong</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
+
+<body>
+    Kieeru du lieu dung de mo ta thuc the o cuoc song
+    Kieu du lieu tien gan hon den cac bai toan thuc te <br>
+    Luu duoc nhieu du lieu khac nhau <br>
+    Có 2 cách khai báo kiểu dữ liệu object là  <br>
+    tenobject.tênthanhphan <br>
+    tenobject['tenthanhphan'] <br>
+    <script>
+        var dongho = {
+            hangsx: "casio",
+            gia: 50000,
+            gioitinh: 'nam',
+            xemngay: function () {
+                console.log('hom nay ngay 4-1-2020');
+            }
+        }
+
+        console.log(dongho.hangsx);
+        console.log(dongho.gia);
+
+        //Bai 12
+        var hocvien = {
+            ten: 'Viet',
+            ho: 'nguyen',
+            tuoi: 31,
+            chieucao: 172,
+            cannang: 65,
+            tendaydu: function () {
+                return this.ho + " " + this.ten
+            },
+            danhgia: function () {
+                if (this.chieucao / hocvien.cannang < 3) {
+                    return "dep trai";
+                }
+                else {
+                    return 'Can tang can'
+                }
+            }
+        }
+        console.log(hocvien['tuoi']);
+        console.log(hocvien.tendaydu());
+        console.log(hocvien.danhgia())
+    </script>
+
+</body>
+
+</html>

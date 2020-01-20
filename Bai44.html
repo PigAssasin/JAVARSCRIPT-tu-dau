@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="Bai44.css">
+</head>
+
+<body>
+    <div class="thanhxanh">
+        <div class="_1khoi">
+            <div class="declick" data-hienlen="user"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+            <div class="dehienthi" id="user">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+        <!--Het mot khoi-->
+
+        <div class="_1khoi">
+            <div class="declick" data-hienlen="comments"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="dehienthi" id="comments">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+        <!--Het mot khoi-->
+
+        <div class="_1khoi">
+            <div class="declick" data-hienlen="thongbao"><i class="fa fa-globe" aria-hidden="true"></i></div>
+            <div class="dehienthi" id="thongbao">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+        <!--Het mot khoi-->
+
+        <div class="_1khoi">
+            <div class="declick" data-hienlen="cauhoi"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+            <div class="dehienthi" id="cauhoi">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+        <!--Het mot khoi-->
+
+        <div class="_1khoi">
+            <div class="declick" data-hienlen="khac"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            <div class="dehienthi" id="khac">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+        <!--Het mot khoi-->
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            //biến sử dụng
+            var nut = document.getElementsByClassName('declick');
+            var nd = document.getElementsByClassName('dehienthi')
+
+            for (let i = 0; i < nut.length; i++) {
+                nut[i].onclick = function () {
+                    for (let k = 0; k < nut.length; k++) {
+                        nut[k].classList.remove('trang')
+
+s
+
+                    }// là cho trong 1 khoảng tg chỉ một cái nhận class .trang
+                    this.classList.toggle('trang');
+
+                    //lấy về cái data-hienlen
+
+                    var ndhienra = this.getAttribute('data-hienlen');
+                    var phantuhienra = document.getElementById(ndhienra);
+                    for (let i = 0; i < nd.length; i++) {
+                        nd[i].classList.remove('ra');
+
+                    }
+
+                    phantuhienra.classList.toggle('ra');
+                }
+            }
+        }, false)
+    </script>
+</body>
+
+</html>

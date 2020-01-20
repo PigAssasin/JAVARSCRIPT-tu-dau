@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <ul class="list-group">
+        <li class="list-group-item active">So 1Active item</li>
+        <li class="list-group-item">Item</li>
+        <li class="list-group-item disabled">So 1Disabled item</li>
+    </ul>
+
+    <ul class="list-group">
+        <li class="list-group-item active">So 2 Active item</li>
+        <li class="list-group-item">Item</li>
+        <li class="list-group-item disabled">So 2Disabled item</li>
+    </ul>
+
+    <ul class="list-group">
+        <li class="list-group-item active">So 3 Active item</li>
+        <li class="list-group-item">Item</li>
+        <li class="list-group-item disabled">So 3Disabled item</li>
+    </ul>
+
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <p>Quote</p>
+                <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <p>Quote</p>
+                <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <p>Quote</p>
+                <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <p>Quote</p>
+                <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+    <script>
+        //hàm query selector
+        var x = document.querySelector('.list-group-item');
+        console.log(x);
+
+
+        //hàm query selector All
+        var a = document.querySelectorAll('.list-group')
+        // console.log(a);
+
+        for (i = 0; i < a.length; i++) {
+            if (i == 2) {
+                console.log(a[i]);
+                a[i].textContent = "Phần tử được chọn"
+            }
+
+        }
+
+        var b = document.querySelectorAll('.card .card-body:first-child .blockquote p')
+        console.log(b);
+
+    </script>
+</body>
+
+</html>

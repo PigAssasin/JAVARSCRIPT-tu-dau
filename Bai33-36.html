@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <style>
+        .card{transition: 0.4s;}
+        .diphai{
+            transform: translateX(200px);
+            animation: sangphai 1s forwards;
+
+        }
+
+        /* @-webkit-keyframes sangphai{
+            form {transform: translateX(0);}
+            to{transform: translateX(200px);}
+        } */
+
+        .chieuso1{
+            animation: chieu1 2s forwards !important;
+
+        }
+
+
+        @-webkit-keyframes chieu1{
+            0%{transform: translateX(200px) translateY(0px);}
+            50%{transform: translateX(200px) translateY(200px);}
+            80%{transform: translateX(500px) translateY(200px);}
+            90%{transform: translateX(500px) translateY(500px);}
+            100%{transform: translateX(700px) translateY(500px);}
+        }
+
+        #kcd{
+            animation: chieu2 2s forwards;
+
+        }
+
+
+        @-webkit-keyframes chieu2{
+            100%{transform: translateX(200px) translateY(0px);}
+            90%{transform: translateX(200px) translateY(200px);}
+            80%{transform: translateX(500px) translateY(200px);}
+            50%{transform: translateX(500px) translateY(500px);}
+            0%{transform: translateX(700px) translateY(500px);}
+        }
+
+        .khongdong{
+            animation: none !important;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="text-center">
+        <button type="button" class="btn btn-info" id="nut1">Info</button>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="card khongdong" id="kcd">
+                <div class="card-header">
+                    Khối nội dung
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">Special title </h4>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                        repudiandae
+                        eveniet, ex repellendus quis harum debitis suscipit, </p>
+                    <a href="" class="btn btn-primary kcd">GO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nut = document.getElementById('nut1');
+            var khoi = document.getElementById('kcd')
+            console.log(khoi[0]);
+            // gọi sự kiện click
+
+            var trangthai = "lan1";
+
+            nut.onclick = function () {
+                // khoi[0].classList.toggle('diphai')
+                if(trangthai == "lan1"){
+                    console.log("Click lần 1")
+                    trangthai = "lan2"
+                    khoi.classList.remove('khongdong')
+                    khoi.classList.add('chieuso1');
+                    
+                }
+                else if(trangthai == "lan2"){
+                    console.log("Click lần 2")
+                    trangthai = "lan1"
+                    khoi.classList.remove('chieuso1')
+                }
+                
+            }
+        },false)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Nếu dùng return trong hàm thì hàm sẽ biến thành 1 giá trị. Bạn có thể console nó hay if nó như 1 số bình thường
+    <script>
+    function tinhtbc(x,y) {
+        var z = (x+y)/2;
+        return z;// return sẽ dừng ngay lệnh tại đây
+    };
+    console.log(tinhtbc(3,5));
+    
+    if(tinhtbc(3,5)>5){
+        console.log("Trung binh cong lớn hơn 5")
+    }
+    else{
+        console.log("Khong lon hơn 5")
+    };
+    </script>
+</body>
+</html>

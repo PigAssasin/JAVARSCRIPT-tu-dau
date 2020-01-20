@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toán tử</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
+<body>
+    Toán tử
+    <button onclick= "chaythu()">CLick vao đây</button>
+
+    <h2>Chia lấy dư tạo ra vòng lặp áp dụng trong tạo carousel, slide.</h2>
+	<script>
+        //toán tử cộng, tru, nhan, chia
+		var x = 10, y=2;
+        z = 'hello ';
+        a= 'obama';
+        console.log(x+y);
+        console.log(z);
+        console.log(z + y);
+        console.log(z +a);
+
+        //chia lấy dư
+        b = 5;
+        function chaythu(){
+            //mỗi lần click thì giảm giá trị cu của b đi 1 đơn vị
+            b = b + 1;
+            // nhưng mà đến số 0 thì lại quay trở về b = 5
+            console.log("Giá trị biến b là:" + b%5);
+            // alert("Chia lấy dư")
+        }
+
+	</script>
+     
+</body>
+</html>

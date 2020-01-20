@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo string template</title>
+</head>
+<div class="kcm" id="kcm-1">
+    <img src="http://kenh14.vn/tieu-chien-lai-duoc-don-se-dong-chinh-du-an-khung-bat-chap-dien-xuat-gay-tranh-cai-20200108110330644.chn"
+        alt="" class="float-xs-left pr-1">
+    <b>Nguyễn Đức Việt</b>
+    <span>Ngày 8/1, trên Weibo lan truyền thông tin Tiêu Chiến sẽ nhận vai chính trong phim chính kịch Bắc Đẩu Nam Cơ
+        Chi Ca.Tiêu Chiến lại được đồn sẽ đóng chính dự án khủng bất chấp diễn xuất gây tranh cãi - Ảnh 1.Đây là dự án
+        lớn do Lưu Hoà Bình - biên kịch của loạt phim dã sử như Vương Triều Ung Chính, Đại Minh Vương Triều 1566, Bắc
+        Bình Không Chiến Sự "cầm trịch". Nam diễn viên chuẩn bị gia nhập đoàn phim vào tháng 3 tới.</span>
+</div>
+
+<body>
+    <script>
+        // tạo mảng dữ liệu (bt là tu cs du lieu thong qua API)
+        var mangd1 = [
+            {
+                id: 1,
+                anh: "https://kenh14cdn.com/zoom/500_314/2020/1/8/page-15784910789221698675188-crop-1578491084666756655395.jpg",
+                ten: "Đại Ha",
+                noidungcm: "Mượn dịp trao giải Quả Cầu Vàng năm 2020, Ricky Gervais lôi các đặc điểm cơ thể của siêu anh hùng Marvel ra làm trò hề."
+            },
+
+            {
+                id: 2,
+                anh: "https://kenh14cdn.com/thumb_w/620/2020/1/8/w-1578470049470410226899.png",
+                ten: "Chung Nghia",
+                noidungcm: "Mượn dịp trao giải Quả Cầu Vàng năm 2020, Ricky Gervais lôi các đặc điểm cơ thể của siêu anh hùng Marvel ra làm trò hề."
+            }
+        ];
+
+        // console.log(mangd1);
+        // console.log(mangd1[0].anh);// gọi ra ảnh tại object nằm trong mảng 
+        // console.log(mangd1[1]['noidungcm'])
+
+        for (var i = 0; i < mangd1.length; i++) {
+            // console.log(mangd1[i].ten)
+
+            var noidung1khoi = `
+        
+        <div class="kcm" id="kcm-${mangd1[i].id}">
+        <img src="${mangd1[i].anh}" alt="" class="float-xs-left pr-1">
+        <b>${mangd1[i].ten}</b>
+        <span>${mangd1[i].noidungcm}</span>
+        </div>`;
+
+            console.log(noidung1khoi);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style>
+    .thanhxanh{
+        height: 50px;
+        background: blue;
+    }
+
+    .motphantu{
+        position: relative;
+        float: right;
+        margin-right: 200px;
+        margin-top: 7px;
+        transition: 0.4s;
+        
+    }
+
+    .tamgiac{
+        color: black;
+        font-size: 19px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .tamgiac:hover{
+        color:lightblue;
+    }
+
+    .danhsach{
+        position: absolute;
+        top: 20px;
+        right: -13px;
+        width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    .danhsach::after{
+        content: "";
+        position: absolute;
+        top: -21px;
+        height: 0px;
+        width: 0px;
+        border: 11px solid blue;
+        border-bottom-color: white;
+        right: 10px;
+    }
+
+    .tamgiactrang{
+        color: white;
+    }
+
+    .ra{
+        opacity: 1;
+        visibility: visible;
+        top: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div class="thanhxanh">
+        <div class="motphantu">
+            <div class="tamgiac"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            <div class="danhsach">
+                <ul class="list-group">
+                    <li class="list-group-item ">Active item</li>
+                    <li class="list-group-item">Item</li>
+                    <li class="list-group-item ">Disabled item</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded",function () {
+        //khai bao bien can su dung
+
+        var tamgiac = document.getElementsByClassName('tamgiac');
+        var tamgiac = tamgiac[0]
+        
+        var danhsach = document.getElementsByClassName('danhsach')
+        var danhsach = danhsach[0]
+
+        //su dung ham onclick va toggle cho tam giac doi mau
+
+        tamgiac.onclick = function () {
+            // this.style.color = 'white';
+            this.classList.toggle('tamgiactrang');
+
+            danhsach.classList.toggle('ra');
+        }
+
+    },false)
+    </script>
+</body>
+</html>
